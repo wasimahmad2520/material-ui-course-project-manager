@@ -472,6 +472,7 @@ export default function ProjectManager() {
             iOSChecked={iOSChecked}
             androidChecked={androidChecked}
             softwareChecked={softwareChecked}
+           
           />
         </Grid>
         <Dialog
@@ -558,10 +559,11 @@ export default function ProjectManager() {
                 >
                   <Grid item style={{ marginTop: matchesSM ? 50 : null }}>
                     <KeyboardDatePicker
-                      style={{ width: matchesSM ? 250 : undefined }}
+                      style={{ width: matchesSM ? 250 : undefined,zIndex:200 }}
                       format="MM/dd/yyyy"
                       value={date}
                       onChange={newDate => setDate(newDate)}
+                      MenuProps={{zIndex:1400}}
                     />
                   </Grid>
                   <Hidden smDown>{complexityQuestions}</Hidden>
